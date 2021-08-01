@@ -13,6 +13,10 @@ export const gamedata: GameCardProps['data'][] = [
     homeTeamRecord: '0-0',
     homeTeamScore: 0,
     homeTeamStreak: 'W0',
+    instagramLink: 'https://www.instagram.com',
+    gameId: '09123456789',
+    gameDate: '2021-01-26',
+    gameTime: '7:30pm',
     purchases: {
       parking: false,
       food: true,
@@ -21,6 +25,8 @@ export const gamedata: GameCardProps['data'][] = [
       giveaway: true
     },
     stats: {
+      attended: true,
+      sold: false,
       dayOfWeek: 'Friday',
       giveaway: true,
       notes: 'Home Opener',
@@ -50,14 +56,20 @@ export const gamedata: GameCardProps['data'][] = [
     homeTeamRecord: '0-0',
     homeTeamScore: 0,
     homeTeamStreak: 'W0',
+    instagramLink: 'https://www.instagram.com',
+    gameId: '09123456789',
+    gameDate: '2021-01-26',
+    gameTime: '7:30pm',
     purchases: {
-      parking: false,
+      parking: true,
       food: true,
       drinks: true,
       merchandise: true,
       giveaway: true
     },
     stats: {
+      attended: true,
+      sold: false,
       dayOfWeek: 'Friday',
       giveaway: true,
       notes: 'Home Opener',
@@ -87,23 +99,29 @@ export const gamedata: GameCardProps['data'][] = [
     homeTeamRecord: '0-0',
     homeTeamScore: 0,
     homeTeamStreak: 'W0',
+    instagramLink: 'https://www.instagram.com',
+    gameId: 'https://www.basketball-reference.com/boxscores/202012220LAL.html',
+    gameDate: '2021-01-26',
+    gameTime: '7:30pm',
     purchases: {
       parking: false,
-      food: true,
-      drinks: true,
-      merchandise: true,
-      giveaway: true
+      food: false,
+      drinks: false,
+      merchandise: false,
+      giveaway: false
     },
     stats: {
+      attended: true,
+      sold: false,
       dayOfWeek: 'Friday',
-      giveaway: true,
+      giveaway: false,
       notes: 'Home Opener',
       startTime: '7:00pm CST',
       status: 'Sold Both',
       statusColorScheme: 'green',
       tv: 'WGN',
-      weather: 'Good',
-      win: true,
+      weather: 'Rain',
+      win: false,
     },
     totals: {
       currency: '$',
@@ -124,6 +142,10 @@ export const gamedata: GameCardProps['data'][] = [
     homeTeamRecord: '0-0',
     homeTeamScore: 0,
     homeTeamStreak: 'W0',
+    instagramLink: 'https://www.instagram.com',
+    gameId: 'https://www.basketball-reference.com/boxscores/202012220LAL.html',
+    gameDate: '2021-01-26',
+    gameTime: '7:30pm',
     purchases: {
       parking: false,
       food: true,
@@ -132,6 +154,8 @@ export const gamedata: GameCardProps['data'][] = [
       giveaway: true
     },
     stats: {
+      attended: true,
+      sold: false,
       dayOfWeek: 'Friday',
       giveaway: true,
       notes: 'Home Opener',
@@ -161,6 +185,10 @@ export const gamedata: GameCardProps['data'][] = [
     homeTeamRecord: '0-0',
     homeTeamScore: 0,
     homeTeamStreak: 'W0',
+    instagramLink: 'https://www.instagram.com',
+    gameId: 'https://www.basketball-reference.com/boxscores/202012220LAL.html',
+    gameDate: '2021-01-26',
+    gameTime: '7:30pm',
     purchases: {
       parking: false,
       food: true,
@@ -169,6 +197,8 @@ export const gamedata: GameCardProps['data'][] = [
       giveaway: true
     },
     stats: {
+      attended: true,
+      sold: false,
       dayOfWeek: 'Friday',
       giveaway: true,
       notes: 'Home Opener',
@@ -198,6 +228,10 @@ export const gamedata: GameCardProps['data'][] = [
     homeTeamRecord: '0-0',
     homeTeamScore: 0,
     homeTeamStreak: 'W0',
+    instagramLink: 'https://www.instagram.com',
+    gameId: 'https://www.basketball-reference.com/boxscores/202012220LAL.html',
+    gameDate: '2021-01-26',
+    gameTime: '7:30pm',
     purchases: {
       parking: false,
       food: true,
@@ -206,6 +240,8 @@ export const gamedata: GameCardProps['data'][] = [
       giveaway: true
     },
     stats: {
+      attended: true,
+      sold: false,
       dayOfWeek: 'Friday',
       giveaway: true,
       notes: 'Home Opener',
