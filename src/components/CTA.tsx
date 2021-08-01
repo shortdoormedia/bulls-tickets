@@ -1,4 +1,4 @@
-import { Link as ChakraLink, Button, Stack, HStack, Icon, Text, useColorModeValue as mode } from '@chakra-ui/react'
+import { Link as ChakraLink, Stack, HStack, Icon, Text, useColorModeValue as mode } from '@chakra-ui/react'
 
 import { Container } from './Container'
 import {BellIcon} from "@chakra-ui/icons";
@@ -10,7 +10,7 @@ export const CTA = () => (
     position="fixed"
     bottom="0"
     width="100%"
-    maxWidth="48rem"
+    maxWidth="60rem"
     bg={mode('blue.600', 'blue.400')}
   >
     <Stack
@@ -25,7 +25,7 @@ export const CTA = () => (
       <HStack spacing="3">
         <Icon as={BellIcon} fontSize="2xl" h="10" />
         <Text fontWeight="medium">
-          Like this site? Want one for yourself? Send a message to <ChakraLink isExternal href="mailto:shortdoormedia@gmail.com">shortdoormedia@gmail.com</ChakraLink>
+          Interested in buying these tickets for a game? Send a message to <ChakraLink isExternal href="mailto:shortdoormedia@gmail.com">shortdoormedia@gmail.com</ChakraLink>
         </Text>
       </HStack>
     </Stack>
