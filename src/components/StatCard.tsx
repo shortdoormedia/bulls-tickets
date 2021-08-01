@@ -1,6 +1,5 @@
 import {
     Box,
-    Circle,
     Flex,
     Heading,
     HStack,
