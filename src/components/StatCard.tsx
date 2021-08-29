@@ -27,6 +27,9 @@ export interface StatCardProps {
 function format(value: number) {
     return new Intl.NumberFormat('en-US', { style: 'decimal', currency: 'USD' }).format(value)
 }
+function formatPercent(value: number) {
+    return new Intl.NumberFormat('en-US', { style: 'decimal' }).format(value)
+}
 
 export const StatCard = (props: StatCardProps) => {
     const { data, accentColor, icon } = props
@@ -52,7 +55,7 @@ export const StatCard = (props: StatCardProps) => {
                     <Text>
                         {currency}
                         {format(change.value)} ({isNegative ? '' : '+'}
-                        {change.percent}%)
+                        {formatPercent(change.percent)}%)
                     </Text>
                 </HStack>
             </Flex>

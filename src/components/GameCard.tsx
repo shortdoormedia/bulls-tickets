@@ -11,7 +11,7 @@ import {
   useColorModeValue as mode,
 } from '@chakra-ui/react'
 import * as React from 'react'
-import { TOR, CHI, DET, ORL, LAL, LAC, MIL, GSW, ATL } from 'react-nba-logos';
+import { ATL, BKN, BOS, CHA, CHI, CLE, DAL, DEN, DET, GSW, HOU, IND, LAC, LAL, MEM, MIA, MIL, MIN, NOP, NYK, OKC, ORL, PHI, PHX, POR, SAC, SAS, TOR, UTA, WAS } from 'react-nba-logos';
 import { ExternalLinkIcon } from '@chakra-ui/icons'
 import { FaBeer, FaCar, FaTshirt, FaStickyNote, FaTrophy, FaCloudRain, FaSun, FaSnowflake, FaTv, FaCalendar, FaDollarSign, FaHandshake, FaLink, FaInstagram, FaBasketballBall } from 'react-icons/fa';
 
@@ -32,30 +32,28 @@ export interface GameCardProps {
     gameId: string
     gameDate: string
     gameTime: string
+    gameType: string
     purchases: {
       drinks: boolean,
       food: boolean,
       merchandise: boolean,
-      parking: boolean,
-      giveaway: boolean
+      parking: boolean
     }
     stats: {
       attended: boolean,
       sold: boolean,
-      dayOfWeek: string,
+      soldDate: string,
       giveaway: boolean,
       notes: string,
-      startTime: string,
       status: string
       statusColorScheme: string
       tv: string
       weather: string,
-      win: boolean,
+      win: boolean
     },
     totals: {
       currency: string
       gameCosts: number
-      netGain: number
       ticketCost: number
       ticketSales: number
     }
@@ -74,12 +72,48 @@ function returnLogo(team: string) {
       ret = ATL;
       break;
     }
+    case "BKN": {
+      ret = BKN;
+      break;
+    }
+    case "BOS": {
+      ret = BOS;
+      break;
+    }
+    case "CHA": {
+      ret = CHA;
+      break;
+    }
     case "CHI": {
       ret = CHI;
       break;
     }
+    case "CLE": {
+      ret = CLE;
+      break;
+    }
+    case "DAL": {
+      ret = DAL;
+      break;
+    }
+    case "DEN": {
+      ret = DEN;
+      break;
+    }
     case "DET": {
       ret = DET;
+      break;
+    }
+    case "GSW": {
+      ret = GSW;
+      break;
+    }
+    case "HOU": {
+      ret = HOU;
+      break;
+    }
+    case "IND": {
+      ret = IND;
       break;
     }
     case "LAC": {
@@ -90,16 +124,68 @@ function returnLogo(team: string) {
       ret = LAL;
       break;
     }
-    case "ORL": {
-      ret = ORL;
+    case "MEM": {
+      ret = MEM;
+      break;
+    }
+    case "MIA": {
+      ret = MIA;
       break;
     }
     case "MIL": {
       ret = MIL;
       break;
     }
+    case "MIN": {
+      ret = MIN;
+      break;
+    }
+    case "NOP": {
+      ret = NOP;
+      break;
+    }
+    case "NYK": {
+      ret = NYK;
+      break;
+    }
+    case "OKC": {
+      ret = OKC;
+      break;
+    }
+    case "ORL": {
+      ret = ORL;
+      break;
+    }
+    case "PHI": {
+      ret = PHI;
+      break;
+    }
+    case "PHX": {
+      ret = PHX;
+      break;
+    }
+    case "POR": {
+      ret = POR;
+      break;
+    }
+    case "SAC": {
+      ret = SAC;
+      break;
+    }
+    case "SAS": {
+      ret = SAS;
+      break;
+    }
     case "TOR": {
       ret = TOR;
+      break;
+    }
+    case "UTA": {
+      ret = UTA;
+      break;
+    }
+    case "WAS": {
+      ret = WAS;
       break;
     }
   }
@@ -123,6 +209,7 @@ export const GameCard = (props: GameCardProps) => {
     gameDate,
     gameId,
     gameTime,
+    gameType,
     stats,
     purchases,
     totals
@@ -131,7 +218,6 @@ export const GameCard = (props: GameCardProps) => {
   const homeLogo = returnLogo(homeTeamLogo);
   const dayOfWeek = new Date(gameDate);
   const day = new Intl.DateTimeFormat('en-US', { weekday: 'long'}).format(dayOfWeek);
-  const isNegative = totals.netGain < 0
   return (
     <Box bg={mode('white', 'gray.700')} px="6" py="4" mb={10} shadow="base" rounded="lg">
       <Flex
@@ -152,7 +238,7 @@ export const GameCard = (props: GameCardProps) => {
         py="4"
         justifyContent="center"
         alignItems="center"
-      ><Badge colorScheme={stats.statusColorScheme}>{stats.status}</Badge></Flex>
+      ><Badge colorScheme={stats.statusColorScheme} ml={1} mr={1}>{stats.status}</Badge><Badge colorScheme={'gray'} ml={1} mr={1}>{gameType}</Badge></Flex>
       <Flex
         justifyContent="center"
          alignItems="center"
@@ -163,7 +249,7 @@ export const GameCard = (props: GameCardProps) => {
             <FaBeer title={'Drinks'}/>
           </Box>
           <Box w={5} h={5}>
-            <FaCalendar title={day}/>
+            <FaCalendar title={gameDate +' ('+ day +')'}/>
           </Box>
           <Box w={5} h={5} d={purchases.parking ? 'flex' : 'none'}>
             <FaCar title={'Parking'}/>
@@ -246,7 +332,7 @@ export const GameCard = (props: GameCardProps) => {
           </HStack>
           <Heading as="h4" size="lg" my="3" fontWeight="extrabold">
             {totals.currency}
-            {format(totals.netGain)}
+            {format((totals.ticketSales-(totals.gameCosts+totals.ticketCost)))}
           </Heading>
         </Box>
       </SimpleGrid>
