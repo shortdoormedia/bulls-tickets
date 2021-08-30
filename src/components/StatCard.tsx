@@ -35,7 +35,7 @@ export const StatCard = (props: StatCardProps) => {
     const { data, accentColor, icon } = props
     const { label, currency, value, change, symbol } = data
 
-    const isNegative = change.percent < 0
+    const isNegative = change.value < 0
 
     return (
         <Box bg={mode('white', 'gray.700')} px="6" py="4" shadow="base" rounded="lg">
