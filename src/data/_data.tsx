@@ -75,7 +75,7 @@ export const data: StatCardProps['data'][] = [
         symbol: 'OVERALL',
         label: 'Overall Season Cost',
         value: overallSeasonCost - totalSold,
-        change: { value: totalSold - overallSeasonCost, percent: (totalSold / overallSeasonCost)*100 },
+        change: { value: totalSold - overallSeasonCost, percent: (1-(totalSold/overallSeasonCost))*100 },
         currency: '$',
     },
 ]
