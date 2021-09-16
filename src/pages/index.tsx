@@ -33,8 +33,8 @@ const Index = () => (
       justifyContent="center"
       alignItems="center"
     >
-      <Box as="section" bg={mode('gray.50', 'gray.800')} p="5">
-        <Box maxW="10xl" mx="auto" py={{ base: '3', md: '6' }}px={{ base: '3', md: '6' }}>
+      <Box as="section" p="5" my="5">
+        <Box maxW="10xl" mx="auto" py={{ base: '3', md: '6' }} px={{ base: '3', md: '6' }}>
           <SimpleGrid columns={{ base: 1, md: 2, lg: 4 }} spacing="6">
             {data.map((stat, index) => {
               const { icon, color: accentColor } = icons[stat.symbol]
