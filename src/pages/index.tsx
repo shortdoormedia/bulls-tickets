@@ -9,8 +9,6 @@ import { Hero } from '../components/Hero'
 import { Container } from '../components/Container'
 import { DarkModeSwitch } from '../components/DarkModeSwitch'
 import { CTA } from '../components/CTA'
-import { Footer } from '../components/Footer'
-
 import * as React from 'react'
 import { data, icons } from '../data/_stats'
 import { gamedata } from '../data/_games'
@@ -30,13 +28,12 @@ const Index = () => (
       canonical="https://bullstickets.net"
     />
     <Hero />
-    <Heading as="h2" size="lg" textAlign="center" px="5" mt="5">Hello Bulls Fans and welcome to my season ticket tracker site.</Heading>
-    <Heading as="h2" size="lg" textAlign="center" px="5" mt="5">Numbers are for <strong>2</strong> seats in <strong>Section 120 Row 4</strong></Heading>
+    <Heading as="h2" size="lg" textAlign="center" px="5" mt="5">Numbers are for 2 seats in Section 120 Row 4</Heading>
     <Flex
       justifyContent="center"
       alignItems="center"
     >
-      <Box as="section" bg={mode('gray.50', 'gray.800')} p="5" my="10">
+      <Box as="section" bg={mode('gray.50', 'gray.800')} p="5">
         <Box maxW="10xl" mx="auto" py={{ base: '3', md: '6' }}px={{ base: '3', md: '6' }}>
           <SimpleGrid columns={{ base: 1, md: 2, lg: 4 }} spacing="6">
             {data.map((stat, index) => {
@@ -54,11 +51,6 @@ const Index = () => (
         })}
       </Box>
     </Flex>
-
-    <Footer>
-      
-    </Footer>
-
     <DarkModeSwitch />
     <CTA/>
   </Container>
