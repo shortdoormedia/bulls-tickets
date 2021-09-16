@@ -15,6 +15,7 @@ import { data, icons } from '../data/_stats'
 import { gamedata } from '../data/_games'
 import { StatCard } from '../components/StatCard'
 import { GameCard } from '../components/GameCard'
+import { NextSeo } from 'next-seo';
 
 function format(value: number) {
   return new Intl.NumberFormat('en-US', { style: 'decimal', currency: 'USD' }).format(value)
@@ -22,6 +23,11 @@ function format(value: number) {
 
 const Index = () => (
   <Container width="100%" py="10">
+    <NextSeo
+      title="BullsTickets.net"
+      description="Chicago Bulls season ticket cost calculator."
+      canonical="https://bullstickets.net"
+    />
     <Hero />
     <Flex
       justifyContent="center"
