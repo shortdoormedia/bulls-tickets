@@ -1,6 +1,7 @@
 import {
-  Flex,
   Box,
+  Flex,
+  Heading,
   SimpleGrid,
   useColorModeValue as mode
 } from '@chakra-ui/react'
@@ -15,6 +16,7 @@ import { data, icons } from '../data/_stats'
 import { gamedata } from '../data/_games'
 import { StatCard } from '../components/StatCard'
 import { GameCard } from '../components/GameCard'
+import { NextSeo } from 'next-seo';
 
 function format(value: number) {
   return new Intl.NumberFormat('en-US', { style: 'decimal', currency: 'USD' }).format(value)
@@ -22,7 +24,14 @@ function format(value: number) {
 
 const Index = () => (
   <Container width="100%" py="10">
+    <NextSeo
+      title="BullsTickets.net"
+      description="Chicago Bulls season ticket cost calculator."
+      canonical="https://bullstickets.net"
+    />
     <Hero />
+    <Heading as="h2" size="lg" textAlign="center" px="5" mt="5">Hello Bulls Fans and welcome to my season ticket tracker site.</Heading>
+    <Heading as="h2" size="lg" textAlign="center" px="5" mt="5">Numbers are for <strong>2</strong> seats in <strong>Section 120 Row 4</strong></Heading>
     <Flex
       justifyContent="center"
       alignItems="center"

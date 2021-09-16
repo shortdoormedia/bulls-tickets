@@ -7,7 +7,7 @@ export const Hero = ({ title }: { title: string }) => (
     bgGradient="linear(to-l, #FF0080, #FF0080)"
     bgClip="text"
   >
-    <Heading fontSize="6vw">{title}</Heading>
+    <Heading as="h1" fontSize="6vw">{title}</Heading>
   </Flex>
 )
 
