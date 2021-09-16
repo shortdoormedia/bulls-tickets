@@ -1,6 +1,7 @@
 import {
-  Flex,
   Box,
+  Flex,
+  Heading,
   SimpleGrid,
   useColorModeValue as mode
 } from '@chakra-ui/react'
@@ -29,6 +30,8 @@ const Index = () => (
       canonical="https://bullstickets.net"
     />
     <Hero />
+    <Heading as="h2" size="lg" textAlign="center" px="5" mt="5">Hello Bulls Fans and welcome to my season ticket tracker site.</Heading>
+    <Heading as="h2" size="lg" textAlign="center" px="5" mt="5">Numbers are for <strong>2</strong> seats in <strong>Section 120 Row 4</strong></Heading>
     <Flex
       justifyContent="center"
       alignItems="center"
