@@ -2,7 +2,7 @@
 
 This project is going to require node and npm and probably some other stuff you may or may not have.
 
-## Local Envirnment
+## Local Environment
 
 You can use Yarn or NPM
 ### NPM
