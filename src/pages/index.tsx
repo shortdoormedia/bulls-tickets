@@ -11,7 +11,7 @@ import { CTA } from '../components/CTA'
 import { Footer } from '../components/Footer'
 
 import * as React from 'react'
-import { data, icons } from '../data/_data'
+import { data, icons } from '../data/_stats'
 import { gamedata } from '../data/_games'
 import { StatCard } from '../components/StatCard'
 import { GameCard } from '../components/GameCard'
@@ -21,14 +21,14 @@ function format(value: number) {
 }
 
 const Index = () => (
-  <Container width="100%">
+  <Container width="100%" py="10">
     <Hero />
     <Flex
       justifyContent="center"
       alignItems="center"
     >
-      <Box as="section" bg={mode('gray.50', 'gray.800')} p="10" m="10">
-        <Box maxW="7xl" mx="auto" px={{ base: '6', md: '8' }}>
+      <Box as="section" bg={mode('gray.50', 'gray.800')} p="5" my="10">
+        <Box maxW="10xl" mx="auto" py={{ base: '3', md: '6' }}px={{ base: '3', md: '6' }}>
           <SimpleGrid columns={{ base: 1, md: 2, lg: 4 }} spacing="6">
             {data.map((stat, index) => {
               const { icon, color: accentColor } = icons[stat.symbol]
