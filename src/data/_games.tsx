@@ -108,7 +108,7 @@ export const gamedata: GameCardProps['data'][] = [
     },
     stats: {
       attended: false,
-      sold: false,
+      sold: true,
       soldDate:'2021-09-15',
       giveaway: false,
       notes: '',
