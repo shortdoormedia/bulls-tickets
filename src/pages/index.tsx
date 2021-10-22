@@ -29,10 +29,6 @@ const Index = () => (
     />
     <Hero />
     <Heading as="h2" size="lg" textAlign="center" px="5" mt="5">Numbers are for 2 seats in Section 120 Row 4</Heading>
-    <Flex
-      justifyContent="center"
-      alignItems="center"
-    >
       <Box as="section" p="5" my="5">
         <Box maxW="10xl" mx="auto" py={{ base: '3', md: '6' }} px={{ base: '3', md: '6' }}>
           <SimpleGrid columns={{ base: 1, md: 2, lg: 4 }} spacing="6">
@@ -43,14 +39,11 @@ const Index = () => (
           </SimpleGrid>
         </Box>
       </Box>
-    </Flex>
-    <Flex>
       <Box maxW="100%" mx="auto" px={{ base: '6', md: '8' }} overflowX="auto" overflowY="auto">
         {gamedata.map((info, index) => {
           return  <GameCard key={index} data={info} />
         })}
       </Box>
-    </Flex>
     <DarkModeSwitch />
     <CTA/>
   </Container>
