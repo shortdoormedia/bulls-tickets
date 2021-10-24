@@ -48,7 +48,7 @@ export interface GameCardProps {
       status: string
       statusColorScheme: string
       tv: string
-      weather: string,
+      weather: number,
       win: boolean
     },
     totals: {
@@ -254,16 +254,16 @@ export const GameCard = (props: GameCardProps) => {
           <Box w={5} h={5} d={purchases.parking ? 'flex' : 'none'}>
             <FaCar title={'Parking'}/>
           </Box>
-          <Box w={5} h={5} d={stats.weather === 'Good' ? 'flex' : 'none'}>
+          <Box w={5} h={5} d={stats.weather > 60 ? 'flex' : 'none'}>
             <FaSun title={'Good'}/>
           </Box>
-          <Box w={5} h={5} d={stats.weather === 'Rain' ? 'flex' : 'none'}>
-            <FaCloudRain title={'Rain'}/>
+          <Box w={5} h={5} d={stats.weather <= 60 && stats.weather >= 35  ? 'flex' : 'none'}>
+            <FaCloudRain title={'Cool'}/>
           </Box>
-          <Box w={5} h={5} d={stats.weather === 'Snow' ? 'flex' : 'none'}>
-            <FaSnowflake title={'Snow'}/>
+          <Box w={5} h={5} d={stats.weather < 35 && stats.weather ? 'flex' : 'none'}>
+            <FaSnowflake title={'Cold'}/>
           </Box>
-          <Box w={5} h={5} d={stats.weather === 'Sold Both' ? 'flex' : 'none'}>
+          <Box w={5} h={5} d={stats.status === 'Sold Both' ? 'flex' : 'none'}>
             <FaHandshake title={'Sold'}/>
           </Box>
           <Box w={5} h={5} d={stats.win ? 'flex' : 'none'}>
