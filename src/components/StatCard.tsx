@@ -25,7 +25,7 @@ export interface StatCardProps {
 }
 
 function format(value: number) {
-    return new Intl.NumberFormat('en-US', { style: 'decimal', currency: 'USD' }).format(value)
+    return new Intl.NumberFormat('en-US', { style: 'decimal', currency: 'USD', maximumFractionDigits: 2, minimumFractionDigits: 2 }).format(value)
 }
 function formatPercent(value: number) {
     return new Intl.NumberFormat('en-US', { style: 'decimal' }).format(value)
