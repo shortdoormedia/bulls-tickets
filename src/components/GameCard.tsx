@@ -62,7 +62,7 @@ export interface GameCardProps {
 }
 
 function format(value: number) {
-  return new Intl.NumberFormat('en-US', { style: 'decimal', currency: 'USD' }).format(value)
+  return new Intl.NumberFormat('en-US', { style: 'decimal', currency: 'USD', maximumFractionDigits: 2, minimumFractionDigits: 2 }).format(value)
 }
 
 function returnLogo(team: string) {
@@ -223,7 +223,10 @@ export const GameCard = (props: GameCardProps) => {
       <Flex
         justifyContent="center"
         alignItems="center"
-      ><Text fontSize='2.5em' p="2">{awayTeamScore} </Text>{React.createElement(awayLogo, {})}{React.createElement(homeLogo, {})}<Text fontSize='2.5em' p="2">{homeTeamScore}</Text></Flex>
+      ><Text fontSize='2.5em' p="2">{awayTeamScore} </Text>{React.createElement(awayLogo, {})}{React.createElement(homeLogo, {})}<Text fontSize='2.5em' p="2">{homeTeamScore} </Text>
+        <Text fontSize="4xl" fontWeight={'strong'} color={'lightgreen'} d={stats.win && awayTeamScore > 0 ? 'flex' : 'none'}>W</Text>
+        <Text fontSize="4xl" fontWeight={'strong'} color={'red'} d={!stats.win && awayTeamScore ? 'flex' : 'none'}>L</Text>
+      </Flex>
       <Flex>
         <Text fontWeight="medium" color={mode('gray.500', 'gray.400')}>{awayTeam}</Text>
         <Spacer/>
