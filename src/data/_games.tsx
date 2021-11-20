@@ -559,11 +559,11 @@ export const gamedata: GameCardProps['data'][] = [
     },
     stats: {
       attended: false,
-      sold: false,
-      soldDate: '',
+      sold: true,
+      soldDate: '2021-11-20',
       giveaway: false,
       notes: '',
-      status: 'for sale',
+      status: 'Sold Both',
       statusColorScheme: 'blue',
       tv: '',
       weather: 0,
@@ -573,7 +573,7 @@ export const gamedata: GameCardProps['data'][] = [
       currency: '$',
       gameCosts: 0.00,
       ticketCost: 309.12,
-      ticketSales: 0.00,
+      ticketSales: 496.00,
     },
   },
   {
