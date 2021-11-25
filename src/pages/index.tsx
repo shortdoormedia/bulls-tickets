@@ -28,9 +28,9 @@ const Index = () => (
       canonical="https://bullstickets.net"
     />
     <Hero />
-    <Heading as="h2" size="lg" textAlign="center" px="5" mt="5">Numbers are for 2 seats in Section 120 Row 4</Heading>
+    <Heading as="h2" size="lg" textAlign="center" px="3" mt="3">Numbers are for 2 seats in Section 120 Row 4</Heading>
       <Box as="section" p="5" my="5">
-        <Box maxW="10xl" mx="auto" py={{ base: '3', md: '6' }} px={{ base: '3', md: '6' }}>
+        <Box maxW="10xl" mx="auto" py={{ base: '3', md: '3' }} px={{ base: '3', md: '6' }} bg={mode('white', 'gray.900')} >
           <SimpleGrid columns={{ base: 1, md: 2, lg: 4 }} spacing="6">
             {data.map((stat, index) => {
               const { icon, color: accentColor } = icons[stat.symbol]
