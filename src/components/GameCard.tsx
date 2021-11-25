@@ -4,6 +4,7 @@ import {
   Link,
   Flex,
   Text,
+  Tooltip,
   Spacer,
   Heading,
   HStack,
@@ -13,7 +14,7 @@ import {
 import * as React from 'react'
 import { ATL, BKN, BOS, CHA, CHI, CLE, DAL, DEN, DET, GSW, HOU, IND, LAC, LAL, MEM, MIA, MIL, MIN, NOP, NYK, OKC, ORL, PHI, PHX, POR, SAC, SAS, TOR, UTA, WAS } from 'react-nba-logos';
 import { ExternalLinkIcon } from '@chakra-ui/icons'
-import { FaBeer, FaCar, FaTshirt, FaStickyNote, FaTrophy, FaCloudRain, FaSun, FaSnowflake, FaTv, FaCalendar, FaDollarSign, FaHandshake, FaLink, FaInstagram, FaBasketballBall } from 'react-icons/fa';
+import { FaBeer, FaCar, FaTshirt, FaStickyNote, FaTrophy, FaCloudRain, FaThermometer, FaTemperatureHigh, FaSun, FaSnowflake, FaTv, FaCalendar, FaDollarSign, FaHandshake, FaLink, FaInstagram, FaBasketballBall } from 'react-icons/fa';
 
 
 export interface GameCardProps {
@@ -219,7 +220,7 @@ export const GameCard = (props: GameCardProps) => {
   const dayOfWeek = new Date(gameDate);
   const day = new Intl.DateTimeFormat('en-US', { weekday: 'long'}).format(dayOfWeek);
   return (
-    <Box bg={mode('white', 'gray.700')} px="6" py="4" mb={10} shadow="base" rounded="lg">
+    <Box bg={mode('white', 'gray.700')} px="4" py="4" mb={10} shadow="base" rounded="lg">
       <Flex
         justifyContent="center"
         alignItems="center"
@@ -249,91 +250,136 @@ export const GameCard = (props: GameCardProps) => {
         >
         <HStack>
           <Box w={5} h={5} d={purchases.drinks ? 'flex' : 'none'}>
-            <FaBeer title={'Drinks'}/>
+            <Tooltip hasArrow label={'Drinks'}>
+              <span>
+                <FaBeer/>
+              </span>
+            </Tooltip>
           </Box>
           <Box w={5} h={5}>
-            <FaCalendar title={gameDate +' ('+ day +')'}/>
+            <Tooltip hasArrow label={gameDate +' ('+ day +')'}>
+              <span>
+                <FaCalendar/>
+              </span>
+            </Tooltip>
           </Box>
           <Box w={5} h={5} d={purchases.parking ? 'flex' : 'none'}>
-            <FaCar title={'Parking'}/>
+            <Tooltip hasArrow label={'Parking'}>
+              <span>
+                <FaCar/>
+              </span>
+            </Tooltip>
           </Box>
-          <Box w={5} h={5} d={stats.weather > 60 ? 'flex' : 'none'}>
-            <FaSun title={'Good'}/>
+          <Box w={5} h={5} d={stats.weather < 50 ? 'flex' : 'none'}>
+            <Tooltip hasArrow label={stats.weather+'F'}>
+              <span>
+                <FaTemperatureHigh/>
+              </span>
+            </Tooltip>
           </Box>
-          <Box w={5} h={5} d={stats.weather <= 60 && stats.weather >= 35  ? 'flex' : 'none'}>
-            <FaCloudRain title={'Cool'}/>
-          </Box>
-          <Box w={5} h={5} d={stats.weather < 35 && stats.weather ? 'flex' : 'none'}>
-            <FaSnowflake title={'Cold'}/>
+          <Box w={5} h={5} d={stats.weather >= 50 ? 'flex' : 'none'}>
+            <Tooltip hasArrow label={stats.weather+'F'}>
+              <span>
+                <FaTemperatureHigh/>
+              </span>
+            </Tooltip>
           </Box>
           <Box w={5} h={5} d={stats.status === 'Sold Both' ? 'flex' : 'none'}>
-            <FaHandshake title={'Sold'}/>
+            <Tooltip hasArrow label={'Sold'}>
+              <span>
+                <FaHandshake/>
+              </span>
+            </Tooltip>
           </Box>
           <Box w={5} h={5} d={stats.win ? 'flex' : 'none'}>
-            <FaTrophy title={'Bulls Win'}/>
+            <Tooltip hasArrow label={'Bulls Win'}>
+              <span>
+                <FaTrophy/>
+              </span>
+            </Tooltip>
           </Box>
           <Box w={5} h={5} d={stats.giveaway ? 'flex' : 'none'}>
-            <FaTshirt title={'Giveaway'}/>
+            <Tooltip hasArrow label={'Giveaway'}>
+              <span>
+                <FaTshirt/>
+              </span>
+            </Tooltip>
           </Box>
           <Box w={5} h={5} d={stats.tv ? 'flex' : 'none'}>
-            <FaTv title={stats.tv}/>
+            <Tooltip hasArrow label={stats.tv}>
+              <span>
+                <FaTv/>
+              </span>
+            </Tooltip>
           </Box>
           <Box w={5} h={5} d={stats.notes ? 'flex' : 'none'}>
-            <FaStickyNote title={stats.notes}/>
+            <Tooltip hasArrow label={stats.notes}>
+              <span>
+                <FaStickyNote/>
+              </span>
+            </Tooltip>
           </Box>
           <Box w={5} h={5} d={stats.notes ? 'flex' : 'none'}>
             <Link href={gameId} isExternal d={gameId ? 'flex' : 'none'}>
-              <FaBasketballBall title="View Game in Basketball Reference"/>
+              <Tooltip hasArrow label={'View Game in Basketball Reference'}>
+                <span>
+                  <FaBasketballBall/>
+                </span>
+              </Tooltip>
             </Link>
           </Box>
           <Box w={5} h={5} d={instagramLink ? 'flex' : 'none'}>
             <Link href={instagramLink} isExternal d={instagramLink ? 'flex' : 'none'}>
-              <FaInstagram title="View Game Photos on Instagram"/>
+              <Tooltip hasArrow label={'View Game Photos on Instagram'}>
+                <span>
+                  <FaInstagram/>
+                </span>
+              </Tooltip>
             </Link>
           </Box>
         </HStack>
       </Flex>
       <SimpleGrid columns={{ base: 1, md: 2, lg: 4 }} spacing="6" mt={4}>
-        <Box bg={mode('white', 'gray.900')} px="6" py="4" shadow="base" rounded="lg">
+        <Box bg={mode('white', 'gray.900')} px="4" py="4" shadow="base" rounded="lg">
           <HStack>
             <Text fontWeight="medium" color={mode('gray.500', 'gray.400')}>
               Ticket Cost
             </Text>
           </HStack>
-          <Heading as="h4" size="lg" my="3" fontWeight="extrabold">
+          <Heading as="h4" size="lg" fontWeight="extrabold">
             {totals.currency}
             {format(totals.ticketCost)}
           </Heading>
         </Box>
-        <Box bg={mode('white', 'gray.900')} px="6" py="4" shadow="base" rounded="lg">
+        <Box bg={mode('white', 'gray.900')} px="4" py="4" shadow="base" rounded="lg">
           <HStack>
             <Text fontWeight="medium" color={mode('gray.500', 'gray.400')}>
               Ticket Sales
             </Text>
           </HStack>
-          <Heading as="h4" size="lg" my="3" fontWeight="extrabold">
+          <Heading as="h4" size="lg" fontWeight="extrabold">
             {totals.currency}
             {format(totals.ticketSales)}
           </Heading>
         </Box>
-        <Box bg={mode('white', 'gray.900')} px="6" py="4" shadow="base" rounded="lg">
+        <Box bg={mode('white', 'gray.900')} px="4" py="4" shadow="base" rounded="lg">
           <HStack>
             <Text fontWeight="medium" color={mode('gray.500', 'gray.400')}>
               Game Cost
             </Text>
           </HStack>
-          <Heading as="h4" size="lg" my="3" fontWeight="extrabold">
+          <Heading as="h4" size="lg" fontWeight="extrabold">
             {totals.currency}
             {format(totals.gameCosts)}
           </Heading>
         </Box>
-        <Box bg={mode('white', 'gray.900')} px="6" py="4" shadow="base" rounded="lg">
+        <Box bg={mode('white', 'gray.900')} px="4" py="4" shadow="base" rounded="lg">
           <HStack>
             <Text fontWeight="medium" color={mode('gray.500', 'gray.400')}>
               Net Gain
             </Text>
           </HStack>
-          <Heading as="h4" size="lg" my="3" fontWeight="extrabold">
+          <Heading as="h4" size="lg" fontWeight="extrabold">
             {totals.currency}
             {format((totals.ticketSales-(totals.gameCosts+totals.ticketCost)))}
           </Heading>
