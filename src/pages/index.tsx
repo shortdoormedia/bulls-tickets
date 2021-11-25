@@ -40,9 +40,11 @@ const Index = () => (
         </Box>
       </Box>
       <Box maxW="100%" mx="auto" px={{ base: '6', md: '8' }} overflowX="auto" overflowY="auto">
+        <SimpleGrid columns={{ base: 1, md: 1, lg: 2 }} spacing="6">
         {gamedata.map((info, index) => {
           return  <GameCard key={index} data={info} />
         })}
+        </SimpleGrid>
       </Box>
     <DarkModeSwitch />
     <CTA/>

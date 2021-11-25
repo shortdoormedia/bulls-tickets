@@ -219,13 +219,13 @@ export const GameCard = (props: GameCardProps) => {
   const homeLogo = returnLogo(homeTeamLogo);
   const gameNight = new Date(gameDate);
   const weekday = new Array(7);
-  weekday[0] = "Monday";
-  weekday[1] = "Tuesday";
-  weekday[2] = "Wednesday";
-  weekday[3] = "Thursday";
-  weekday[4] = "Friday";
-  weekday[5] = "Saturday";
-  weekday[6] = "Sunday";
+  weekday[0] = "Sunday";
+  weekday[1] = "Monday";
+  weekday[2] = "Tuesday";
+  weekday[3] = "Wednesday";
+  weekday[4] = "Thursday";
+  weekday[5] = "Friday";
+  weekday[6] = "Saturday";
   const month = new Array(12);
   month[0] = "January";
   month[1] = "February";
@@ -242,7 +242,7 @@ export const GameCard = (props: GameCardProps) => {
   let day = weekday[gameNight.getDay()];
   let mo = month[gameNight.getMonth()];
   return (
-    <Box bg={mode('white', 'gray.700')} px="4" py="4" mb={10} shadow="base" rounded="lg">
+    <Box bg={mode('white', 'gray.700')} px="4" py="4" mb={0} shadow="base" rounded="lg">
       <Flex
         justifyContent="center"
         alignItems="center"
@@ -263,7 +263,7 @@ export const GameCard = (props: GameCardProps) => {
       <Flex
         justifyContent="center"
         alignItems="center"
-      ><Text fontSize="xs"> {mo} {gameTime} {gameNight.getDay()} {stats.tv}</Text>
+      ><Text fontSize="xs"> {mo} {gameNight.getDate()}, {gameTime}  {stats.tv}</Text>
       </Flex>
       <Flex
         py="3"
@@ -278,7 +278,7 @@ export const GameCard = (props: GameCardProps) => {
               </span>
           </Tooltip>
         </Box>
-        <Box w={5} h={5} px={3}>
+        <Box w={5} h={5} px={3} d={'flex'}>
           <Tooltip hasArrow label={day}>
               <span>
                 <FaCalendar/>
