@@ -15,7 +15,7 @@ export const gamedata: GameCardProps['data'][] = [
     homeTeamStreak: 'W1',
     instagramLink: '',
     gameId: '',
-    gameDate: '10-05-2021',
+    gameDate: '2021-10-05',
     gameTime: '7:00pm CST',
     gameType: 'preseason',
     purchases: {
@@ -56,7 +56,7 @@ export const gamedata: GameCardProps['data'][] = [
     homeTeamStreak: 'W2',
     instagramLink: '',
     gameId: '',
-    gameDate: '10-08-2021',
+    gameDate: '2021-10-08',
     gameTime: '7:00pm CST',
     gameType: 'preseason',
     purchases: {
@@ -97,7 +97,7 @@ export const gamedata: GameCardProps['data'][] = [
     homeTeamStreak: 'W4',
     instagramLink: '',
     gameId: '',
-    gameDate: '10-15-2021',
+    gameDate: '2021-10-15',
     gameTime: '7:00pm CST',
     gameType: 'preseason',
     purchases: {
@@ -138,7 +138,7 @@ export const gamedata: GameCardProps['data'][] = [
     homeTeamStreak: 'W1',
     instagramLink: '',
     gameId: 'https://www.basketball-reference.com/boxscores/202110220CHI.html',
-    gameDate: '10-22-2021',
+    gameDate: '2021-10-22',
     gameTime: '7:00pm',
     gameType: 'regular season',
     purchases: {
@@ -179,7 +179,7 @@ export const gamedata: GameCardProps['data'][] = [
     homeTeamStreak: 'W3',
     instagramLink: '',
     gameId: 'https://www.basketball-reference.com/boxscores/202110230CHI.html',
-    gameDate: '10-23-2021',
+    gameDate: '2021-10-23',
     gameTime: '7:00pm',
     gameType: 'regular season',
     purchases: {
@@ -220,7 +220,7 @@ export const gamedata: GameCardProps['data'][] = [
     homeTeamStreak: 'W4',
     instagramLink: '',
     gameId: 'https://www.basketball-reference.com/boxscores/202110280CHI.html',
-    gameDate: '10-28-2021',
+    gameDate: '2021-10-28',
     gameTime: '7:00pm',
     gameType: 'regular season',
     purchases: {
@@ -261,7 +261,7 @@ export const gamedata: GameCardProps['data'][] = [
     homeTeamStreak: 'L1',
     instagramLink: '',
     gameId: 'https://www.basketball-reference.com/boxscores/202110300CHI.html',
-    gameDate: '10-30-2021',
+    gameDate: '2021-10-30',
     gameTime: '7:00pm',
     gameType: 'regular season',
     purchases: {
@@ -302,7 +302,7 @@ export const gamedata: GameCardProps['data'][] = [
     homeTeamStreak: 'L2',
     instagramLink: '',
     gameId: 'https://www.basketball-reference.com/boxscores/202111060CHI.html',
-    gameDate: '11-06-2021',
+    gameDate: '2021-11-06',
     gameTime: '7:00pm',
     gameType: 'regular season',
     purchases: {
@@ -343,7 +343,7 @@ export const gamedata: GameCardProps['data'][] = [
     homeTeamStreak: 'W1',
     instagramLink: '',
     gameId: 'https://www.basketball-reference.com/boxscores/202111080CHI.html',
-    gameDate: '11-08-2021',
+    gameDate: '2021-11-08',
     gameTime: '7:00pm',
     gameType: 'regular season',
     purchases: {
@@ -384,7 +384,7 @@ export const gamedata: GameCardProps['data'][] = [
     homeTeamStreak: 'W2',
     instagramLink: '',
     gameId: 'https://www.basketball-reference.com/boxscores/202111100CHI.html',
-    gameDate: '11-10-2021',
+    gameDate: '2021-11-10',
     gameTime: '7:00pm',
     gameType: 'regular season',
     purchases: {
@@ -425,7 +425,7 @@ export const gamedata: GameCardProps['data'][] = [
     homeTeamStreak: 'W2',
     instagramLink: '',
     gameId: 'https://www.basketball-reference.com/boxscores/202111210CHI.html',
-    gameDate: '11-21-2021',
+    gameDate: '2021-11-21',
     gameTime: '7:00pm',
     gameType: 'regular season',
     purchases: {
@@ -466,7 +466,7 @@ export const gamedata: GameCardProps['data'][] = [
     homeTeamStreak: 'L1',
     instagramLink: '',
     gameId: 'https://www.basketball-reference.com/boxscores/202111220CHI.html',
-    gameDate: '11-22-2021',
+    gameDate: '2021-11-22',
     gameTime: '7:00pm',
     gameType: 'regular season',
     purchases: {
@@ -507,7 +507,7 @@ export const gamedata: GameCardProps['data'][] = [
     homeTeamStreak: 'W0',
     instagramLink: '',
     gameId: '',
-    gameDate: '11-27-2021',
+    gameDate: '2021-11-27',
     gameTime: '7:00pm',
     gameType: 'regular season',
     purchases: {
@@ -548,7 +548,7 @@ export const gamedata: GameCardProps['data'][] = [
     homeTeamStreak: 'W0',
     instagramLink: '',
     gameId: '',
-    gameDate: '11-29-2021',
+    gameDate: '2021-11-29',
     gameTime: '7:00pm',
     gameType: 'regular season',
     purchases: {
@@ -589,7 +589,7 @@ export const gamedata: GameCardProps['data'][] = [
     homeTeamStreak: 'W0',
     instagramLink: '',
     gameId: '',
-    gameDate: '12-06-2021',
+    gameDate: '2021-12-06',
     gameTime: '7:00pm',
     gameType: 'regular season',
     purchases: {
@@ -630,7 +630,7 @@ export const gamedata: GameCardProps['data'][] = [
     homeTeamStreak: 'W0',
     instagramLink: '',
     gameId: '',
-    gameDate: '12-14-2021',
+    gameDate: '2021-12-14',
     gameTime: '7:00pm',
     gameType: 'regular season',
     purchases: {
@@ -671,7 +671,7 @@ export const gamedata: GameCardProps['data'][] = [
     homeTeamStreak: 'W0',
     instagramLink: '',
     gameId: '',
-    gameDate: '12-19-2021',
+    gameDate: '2021-12-19',
     gameTime: '2:30pm',
     gameType: 'regular season',
     purchases: {
@@ -712,7 +712,7 @@ export const gamedata: GameCardProps['data'][] = [
     homeTeamStreak: 'W0',
     instagramLink: '',
     gameId: '',
-    gameDate: '12-20-2021',
+    gameDate: '2021-12-20',
     gameTime: '7:00pm',
     gameType: 'regular season',
     purchases: {
@@ -753,7 +753,7 @@ export const gamedata: GameCardProps['data'][] = [
     homeTeamStreak: 'W0',
     instagramLink: '',
     gameId: '',
-    gameDate: '12-22-2021',
+    gameDate: '2021-12-22',
     gameTime: '7:00pm',
     gameType: 'regular season',
     purchases: {
@@ -794,7 +794,7 @@ export const gamedata: GameCardProps['data'][] = [
     homeTeamStreak: 'W0',
     instagramLink: '',
     gameId: '',
-    gameDate: '12-26-2021',
+    gameDate: '2021-12-26',
     gameTime: '7:00pm',
     gameType: 'regular season',
     purchases: {
@@ -835,7 +835,7 @@ export const gamedata: GameCardProps['data'][] = [
     homeTeamStreak: 'W0',
     instagramLink: '',
     gameId: '',
-    gameDate: '12-29-2021',
+    gameDate: '2021-12-29',
     gameTime: '7:00pm',
     gameType: 'regular season',
     purchases: {
@@ -876,7 +876,7 @@ export const gamedata: GameCardProps['data'][] = [
     homeTeamStreak: 'W0',
     instagramLink: '',
     gameId: '',
-    gameDate: '01-03-2021',
+    gameDate: '2021-01-03',
     gameTime: '7:00pm',
     gameType: 'regular season',
     purchases: {
@@ -917,7 +917,7 @@ export const gamedata: GameCardProps['data'][] = [
     homeTeamStreak: 'W0',
     instagramLink: '',
     gameId: '',
-    gameDate: '01-07-2021',
+    gameDate: '2021-01-07',
     gameTime: '7:00pm',
     gameType: 'regular season',
     purchases: {
@@ -958,7 +958,7 @@ export const gamedata: GameCardProps['data'][] = [
     homeTeamStreak: 'W0',
     instagramLink: '',
     gameId: '',
-    gameDate: '01-12-2021',
+    gameDate: '2021-01-12',
     gameTime: '9:00pm',
     gameType: 'regular season',
     purchases: {
@@ -999,7 +999,7 @@ export const gamedata: GameCardProps['data'][] = [
     homeTeamStreak: 'W0',
     instagramLink: '',
     gameId: '',
-    gameDate: '01-14-2021',
+    gameDate: '2021-01-14',
     gameTime: '9:00pm',
     gameType: 'regular season',
     purchases: {
@@ -1040,7 +1040,7 @@ export const gamedata: GameCardProps['data'][] = [
     homeTeamStreak: 'W0',
     instagramLink: '',
     gameId: '',
-    gameDate: '01-19-2021',
+    gameDate: '2021-01-19',
     gameTime: '9:00pm',
     gameType: 'regular season',
     purchases: {
@@ -1081,7 +1081,7 @@ export const gamedata: GameCardProps['data'][] = [
     homeTeamStreak: 'W0',
     instagramLink: '',
     gameId: '',
-    gameDate: '01-30-2021',
+    gameDate: '2021-01-30',
     gameTime: '2:30pm',
     gameType: 'regular season',
     purchases: {
@@ -1122,7 +1122,7 @@ export const gamedata: GameCardProps['data'][] = [
     homeTeamStreak: 'W0',
     instagramLink: '',
     gameId: '',
-    gameDate: '02-01-2021',
+    gameDate: '2021-02-01',
     gameTime: '2:30pm',
     gameType: 'regular season',
     purchases: {
@@ -1163,7 +1163,7 @@ export const gamedata: GameCardProps['data'][] = [
     homeTeamStreak: 'W0',
     instagramLink: '',
     gameId: '',
-    gameDate: '02-06-2021',
+    gameDate: '2021-02-06',
     gameTime: '2:30pm',
     gameType: 'regular season',
     purchases: {
@@ -1204,7 +1204,7 @@ export const gamedata: GameCardProps['data'][] = [
     homeTeamStreak: 'W0',
     instagramLink: '',
     gameId: '',
-    gameDate: '02-07-2021',
+    gameDate: '2021-02-07',
     gameTime: '7:00pm',
     gameType: 'regular season',
     purchases: {
@@ -1245,7 +1245,7 @@ export const gamedata: GameCardProps['data'][] = [
     homeTeamStreak: 'W0',
     instagramLink: '',
     gameId: '',
-    gameDate: '02-11-2021',
+    gameDate: '2021-02-11',
     gameTime: '7:00pm',
     gameType: 'regular season',
     purchases: {
@@ -1286,7 +1286,7 @@ export const gamedata: GameCardProps['data'][] = [
     homeTeamStreak: 'W0',
     instagramLink: '',
     gameId: '',
-    gameDate: '02-12-2021',
+    gameDate: '2021-02-12',
     gameTime: '7:00pm',
     gameType: 'regular season',
     purchases: {
@@ -1327,7 +1327,7 @@ export const gamedata: GameCardProps['data'][] = [
     homeTeamStreak: 'W0',
     instagramLink: '',
     gameId: '',
-    gameDate: '02-14-2021',
+    gameDate: '2021-02-14',
     gameTime: '7:00pm',
     gameType: 'regular season',
     purchases: {
@@ -1368,7 +1368,7 @@ export const gamedata: GameCardProps['data'][] = [
     homeTeamStreak: 'W0',
     instagramLink: '',
     gameId: '',
-    gameDate: '02-16-2021',
+    gameDate: '2021-02-16',
     gameTime: '7:00pm',
     gameType: 'regular season',
     purchases: {
@@ -1409,7 +1409,7 @@ export const gamedata: GameCardProps['data'][] = [
     homeTeamStreak: 'W0',
     instagramLink: '',
     gameId: '',
-    gameDate: '02-24-2021',
+    gameDate: '2021-02-24',
     gameTime: '7:00pm',
     gameType: 'regular season',
     purchases: {
@@ -1450,7 +1450,7 @@ export const gamedata: GameCardProps['data'][] = [
     homeTeamStreak: 'W0',
     instagramLink: '',
     gameId: '',
-    gameDate: '02-26-2021',
+    gameDate: '2021-02-26',
     gameTime: '7:00pm',
     gameType: 'regular season',
     purchases: {
@@ -1491,7 +1491,7 @@ export const gamedata: GameCardProps['data'][] = [
     homeTeamStreak: 'W0',
     instagramLink: '',
     gameId: '',
-    gameDate: '03-04-2021',
+    gameDate: '2021-03-04',
     gameTime: '7:00pm',
     gameType: 'regular season',
     purchases: {
@@ -1532,7 +1532,7 @@ export const gamedata: GameCardProps['data'][] = [
     homeTeamStreak: 'W0',
     instagramLink: '',
     gameId: '',
-    gameDate: '03-12-2021',
+    gameDate: '2021-03-12',
     gameTime: '7:00pm',
     gameType: 'regular season',
     purchases: {
@@ -1573,7 +1573,7 @@ export const gamedata: GameCardProps['data'][] = [
     homeTeamStreak: 'W0',
     instagramLink: '',
     gameId: '',
-    gameDate: '03-21-2021',
+    gameDate: '2021-03-21',
     gameTime: '7:00pm',
     gameType: 'regular season',
     purchases: {
@@ -1614,7 +1614,7 @@ export const gamedata: GameCardProps['data'][] = [
     homeTeamStreak: 'W0',
     instagramLink: '',
     gameId: '',
-    gameDate: '03-31-2021',
+    gameDate: '2021-03-31',
     gameTime: '7:00pm',
     gameType: 'regular season',
     purchases: {
@@ -1655,7 +1655,7 @@ export const gamedata: GameCardProps['data'][] = [
     homeTeamStreak: 'W0',
     instagramLink: '',
     gameId: '',
-    gameDate: '04-02-2021',
+    gameDate: '2021-04-02',
     gameTime: '7:00pm',
     gameType: 'regular season',
     purchases: {
@@ -1696,7 +1696,7 @@ export const gamedata: GameCardProps['data'][] = [
     homeTeamStreak: 'W0',
     instagramLink: '',
     gameId: '',
-    gameDate: '04-05-2021',
+    gameDate: '2021-04-05',
     gameTime: '7:00pm',
     gameType: 'regular season',
     purchases: {
@@ -1737,7 +1737,7 @@ export const gamedata: GameCardProps['data'][] = [
     homeTeamStreak: 'W0',
     instagramLink: '',
     gameId: '',
-    gameDate: '04-06-2021',
+    gameDate: '2021-04-06',
     gameTime: '7:00pm',
     gameType: 'regular season',
     purchases: {
@@ -1778,7 +1778,7 @@ export const gamedata: GameCardProps['data'][] = [
     homeTeamStreak: 'W0',
     instagramLink: '',
     gameId: '',
-    gameDate: '04-08-2021',
+    gameDate: '2021-04-08',
     gameTime: '7:00pm',
     gameType: 'regular season',
     purchases: {

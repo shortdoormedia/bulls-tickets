@@ -12,6 +12,7 @@ import {
   useColorModeValue as mode,
 } from '@chakra-ui/react'
 import * as React from 'react'
+import moment from "moment";
 import { ATL, BKN, BOS, CHA, CHI, CLE, DAL, DEN, DET, GSW, HOU, IND, LAC, LAL, MEM, MIA, MIL, MIN, NOP, NYK, OKC, ORL, PHI, PHX, POR, SAC, SAS, TOR, UTA, WAS } from 'react-nba-logos';
 import { ExternalLinkIcon } from '@chakra-ui/icons'
 import { FaBeer, FaCar, FaTshirt, FaStickyNote, FaTrophy, FaCloudRain, FaThermometer, FaTemperatureHigh, FaSun, FaSnowflake, FaTv, FaCalendar, FaDollarSign, FaHandshake, FaLink, FaInstagram, FaBasketballBall } from 'react-icons/fa';
@@ -217,30 +218,9 @@ export const GameCard = (props: GameCardProps) => {
   } = data
   const awayLogo = returnLogo(awayTeamLogo);
   const homeLogo = returnLogo(homeTeamLogo);
-  const gameNight = new Date(gameDate);
-  const weekday = new Array(7);
-  weekday[0] = "Sunday";
-  weekday[1] = "Monday";
-  weekday[2] = "Tuesday";
-  weekday[3] = "Wednesday";
-  weekday[4] = "Thursday";
-  weekday[5] = "Friday";
-  weekday[6] = "Saturday";
-  const month = new Array(12);
-  month[0] = "January";
-  month[1] = "February";
-  month[2] = "March";
-  month[3] = "April";
-  month[4] = "May";
-  month[5] = "June";
-  month[6] = "July";
-  month[7] = "August";
-  month[8] = "September";
-  month[9] = "October";
-  month[10] = "November";
-  month[11] = "December";
-  let day = weekday[gameNight.getDay()];
-  let mo = month[gameNight.getMonth()];
+  const gameNight = moment(gameDate).format('dddd');
+  const gameMonth = moment(gameDate).format('MMM');
+  const gameDay = moment(gameDate).format('Do');
   return (
     <Box bg={mode('white', 'gray.700')} px="4" py="4" mb={0} shadow="base" rounded="lg">
       <Flex
@@ -263,7 +243,7 @@ export const GameCard = (props: GameCardProps) => {
       <Flex
         justifyContent="center"
         alignItems="center"
-      ><Text fontSize="xs"> {mo} {gameNight.getDate()}, {gameTime}  {stats.tv}</Text>
+      ><Text fontSize="xs"> {gameMonth} {gameDay}, {gameTime}  {stats.tv}</Text>
       </Flex>
       <Flex
         py="3"
@@ -279,7 +259,7 @@ export const GameCard = (props: GameCardProps) => {
           </Tooltip>
         </Box>
         <Box w={5} h={5} px={3} d={'flex'}>
-          <Tooltip hasArrow label={day}>
+          <Tooltip hasArrow label={gameNight}>
               <span>
                 <FaCalendar/>
               </span>
