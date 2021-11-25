@@ -217,8 +217,30 @@ export const GameCard = (props: GameCardProps) => {
   } = data
   const awayLogo = returnLogo(awayTeamLogo);
   const homeLogo = returnLogo(homeTeamLogo);
-  const dayOfWeek = new Date(gameDate);
-  const day = new Intl.DateTimeFormat('en-US', { weekday: 'long'}).format(dayOfWeek);
+  const gameNight = new Date(gameDate);
+  const weekday = new Array(7);
+  weekday[0] = "Monday";
+  weekday[1] = "Tuesday";
+  weekday[2] = "Wednesday";
+  weekday[3] = "Thursday";
+  weekday[4] = "Friday";
+  weekday[5] = "Saturday";
+  weekday[6] = "Sunday";
+  const month = new Array(12);
+  month[0] = "January";
+  month[1] = "February";
+  month[2] = "March";
+  month[3] = "April";
+  month[4] = "May";
+  month[5] = "June";
+  month[6] = "July";
+  month[7] = "August";
+  month[8] = "September";
+  month[9] = "October";
+  month[10] = "November";
+  month[11] = "December";
+  let day = weekday[gameNight.getDay()];
+  let mo = month[gameNight.getMonth()];
   return (
     <Box bg={mode('white', 'gray.700')} px="4" py="4" mb={10} shadow="base" rounded="lg">
       <Flex
@@ -229,115 +251,107 @@ export const GameCard = (props: GameCardProps) => {
         <Text fontSize="4xl" fontWeight={'strong'} color={'red'} d={!stats.win && awayTeamScore ? 'flex' : 'none'}>L</Text>
       </Flex>
       <Flex>
-        <Text fontWeight="medium" color={mode('gray.500', 'gray.400')}>{awayTeam}</Text>
+        <Text fontWeight="medium">{awayTeam}</Text>
         <Spacer/>
-        <Text fontWeight="medium" color={mode('gray.500', 'gray.400')}>{awayTeamScore} ({awayTeamRecord}) [{awayTeamStreak}]</Text>
+        <Text fontWeight="medium">{awayTeamScore} ({awayTeamRecord}) [{awayTeamStreak}]</Text>
       </Flex>
       <Flex>
-        <Text fontWeight="medium" color={mode('gray.500', 'gray.400')}>{homeTeam}</Text>
+        <Text fontWeight="medium">{homeTeam}</Text>
         <Spacer/>
-        <Text fontWeight="medium" color={mode('gray.500', 'gray.400')}>{homeTeamScore} ({homeTeamRecord}) [{homeTeamStreak}]</Text>
+        <Text fontWeight="medium">{homeTeamScore} ({homeTeamRecord}) [{homeTeamStreak}]</Text>
       </Flex>
       <Flex
-        py="4"
         justifyContent="center"
         alignItems="center"
-      ><Badge colorScheme={stats.statusColorScheme} ml={1} mr={1}>{stats.status}</Badge><Badge colorScheme={'gray'} ml={1} mr={1}>{gameType}</Badge></Flex>
+      ><Text fontSize="xs"> {mo} {gameTime} {gameNight.getDay()} {stats.tv}</Text>
+      </Flex>
       <Flex
+        py="3"
         justifyContent="center"
-         alignItems="center"
-         color={mode('gray.500', 'gray.400')}
-        >
-        <HStack>
-          <Box w={5} h={5} d={purchases.drinks ? 'flex' : 'none'}>
-            <Tooltip hasArrow label={'Drinks'}>
+        alignItems="center"
+        color={mode('gray.500', 'gray.400')}
+      ><Badge colorScheme={stats.statusColorScheme} ml={1} mr={1}>{stats.status}</Badge><Badge colorScheme={'gray'} ml={1} mr={1}>{gameType}</Badge>
+        <Box w={5} h={5} px={3} d={purchases.drinks ? 'flex' : 'none'}>
+          <Tooltip hasArrow label={'Drinks'}>
               <span>
                 <FaBeer/>
               </span>
-            </Tooltip>
-          </Box>
-          <Box w={5} h={5}>
-            <Tooltip hasArrow label={gameDate +' ('+ day +')'}>
+          </Tooltip>
+        </Box>
+        <Box w={5} h={5} px={3}>
+          <Tooltip hasArrow label={day}>
               <span>
                 <FaCalendar/>
               </span>
-            </Tooltip>
-          </Box>
-          <Box w={5} h={5} d={purchases.parking ? 'flex' : 'none'}>
-            <Tooltip hasArrow label={'Parking'}>
+          </Tooltip>
+        </Box>
+        <Box w={5} h={5} px={3} d={purchases.parking ? 'flex' : 'none'}>
+          <Tooltip hasArrow label={'Parking'}>
               <span>
                 <FaCar/>
               </span>
-            </Tooltip>
-          </Box>
-          <Box w={5} h={5} d={stats.weather < 50 ? 'flex' : 'none'}>
-            <Tooltip hasArrow label={stats.weather+'F'}>
+          </Tooltip>
+        </Box>
+        <Box w={5} h={5} px={3} d={stats.weather < 50 ? 'flex' : 'none'}>
+          <Tooltip hasArrow label={stats.weather+'F'}>
               <span>
                 <FaTemperatureHigh/>
               </span>
-            </Tooltip>
-          </Box>
-          <Box w={5} h={5} d={stats.weather >= 50 ? 'flex' : 'none'}>
-            <Tooltip hasArrow label={stats.weather+'F'}>
+          </Tooltip>
+        </Box>
+        <Box w={5} h={5} px={3} d={stats.weather >= 50 ? 'flex' : 'none'}>
+          <Tooltip hasArrow label={stats.weather+'F'}>
               <span>
                 <FaTemperatureHigh/>
               </span>
-            </Tooltip>
-          </Box>
-          <Box w={5} h={5} d={stats.status === 'Sold Both' ? 'flex' : 'none'}>
-            <Tooltip hasArrow label={'Sold'}>
-              <span>
-                <FaHandshake/>
-              </span>
-            </Tooltip>
-          </Box>
-          <Box w={5} h={5} d={stats.win ? 'flex' : 'none'}>
-            <Tooltip hasArrow label={'Bulls Win'}>
+          </Tooltip>
+        </Box>
+        <Box w={5} h={5} px={3} d={stats.win ? 'flex' : 'none'}>
+          <Tooltip hasArrow label={'Bulls Win'}>
               <span>
                 <FaTrophy/>
               </span>
-            </Tooltip>
-          </Box>
-          <Box w={5} h={5} d={stats.giveaway ? 'flex' : 'none'}>
-            <Tooltip hasArrow label={'Giveaway'}>
+          </Tooltip>
+        </Box>
+        <Box w={5} h={5} px={3} d={stats.giveaway ? 'flex' : 'none'}>
+          <Tooltip hasArrow label={'Giveaway'}>
               <span>
                 <FaTshirt/>
               </span>
-            </Tooltip>
-          </Box>
-          <Box w={5} h={5} d={stats.tv ? 'flex' : 'none'}>
-            <Tooltip hasArrow label={stats.tv}>
+          </Tooltip>
+        </Box>
+        <Box w={5} h={5} px={3} d={stats.tv ? 'flex' : 'none'}>
+          <Tooltip hasArrow label={stats.tv}>
               <span>
                 <FaTv/>
               </span>
-            </Tooltip>
-          </Box>
-          <Box w={5} h={5} d={stats.notes ? 'flex' : 'none'}>
-            <Tooltip hasArrow label={stats.notes}>
+          </Tooltip>
+        </Box>
+        <Box w={5} h={5} px={3} d={stats.notes ? 'flex' : 'none'}>
+          <Tooltip hasArrow label={stats.notes}>
               <span>
                 <FaStickyNote/>
               </span>
-            </Tooltip>
-          </Box>
-          <Box w={5} h={5} d={stats.notes ? 'flex' : 'none'}>
-            <Link href={gameId} isExternal d={gameId ? 'flex' : 'none'}>
-              <Tooltip hasArrow label={'View Game in Basketball Reference'}>
+          </Tooltip>
+        </Box>
+        <Box w={5} h={5} px={3} d={stats.notes ? 'flex' : 'none'}>
+          <Link href={gameId} isExternal d={gameId ? 'flex' : 'none'}>
+            <Tooltip hasArrow label={'View Game in Basketball Reference'}>
                 <span>
                   <FaBasketballBall/>
                 </span>
-              </Tooltip>
-            </Link>
-          </Box>
-          <Box w={5} h={5} d={instagramLink ? 'flex' : 'none'}>
-            <Link href={instagramLink} isExternal d={instagramLink ? 'flex' : 'none'}>
-              <Tooltip hasArrow label={'View Game Photos on Instagram'}>
+            </Tooltip>
+          </Link>
+        </Box>
+        <Box w={5} h={5} px={3} d={instagramLink ? 'flex' : 'none'}>
+          <Link href={instagramLink} isExternal d={instagramLink ? 'flex' : 'none'}>
+            <Tooltip hasArrow label={'View Game Photos on Instagram'}>
                 <span>
                   <FaInstagram/>
                 </span>
-              </Tooltip>
-            </Link>
-          </Box>
-        </HStack>
+            </Tooltip>
+          </Link>
+        </Box>
       </Flex>
       <SimpleGrid columns={{ base: 1, md: 2, lg: 4 }} spacing="6" mt={4}>
         <Box bg={mode('white', 'gray.900')} px="4" py="4" shadow="base" rounded="lg">
