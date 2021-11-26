@@ -30,8 +30,8 @@ const Index = () => (
     <Hero />
     <Heading as="h2" size="lg" textAlign="center" px="3" mt="3">Numbers are for 2 seats in Section 120 Row 4</Heading>
       <Box as="section" p="5" my="5">
-        <Box maxW="10xl" mx="auto" py={{ base: '3', md: '3' }} px={{ base: '3', md: '6' }} bg={mode('white', 'gray.900')} >
-          <SimpleGrid columns={{ base: 1, md: 2, lg: 4 }} spacing="6">
+        <Box maxW="10xl" mx="auto" py={{ base: '3', md: '3' }} px={{ base: 2, md: 3 }} bg={mode('white', 'gray.900')} >
+          <SimpleGrid columns={{ base: 2, md: 2, lg: 4 }} spacing={{ base: 2, md: 4, lg: 6 }}>
             {data.map((stat, index) => {
               const { icon, color: accentColor } = icons[stat.symbol]
               return <StatCard icon={icon} accentColor={accentColor} key={index} data={stat} />
