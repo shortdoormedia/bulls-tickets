@@ -246,11 +246,18 @@ export const GameCard = (props: GameCardProps) => {
       ><Text fontSize="xs"> {gameMonth} {gameDay}, {gameTime}  {stats.tv}</Text>
       </Flex>
       <Flex
-        py="3"
+        py="2"
         justifyContent="center"
         alignItems="center"
         color={mode('gray.500', 'gray.400')}
       ><Badge colorScheme={stats.statusColorScheme} ml={1} mr={1}>{stats.status}</Badge><Badge colorScheme={'gray'} ml={1} mr={1}>{gameType}</Badge>
+      </Flex>
+      <Flex
+        py="1"
+        justifyContent="center"
+        alignItems="center"
+        color={mode('gray.500', 'gray.400')}
+      >
         <Box w={5} h={5} px={3} d={purchases.drinks ? 'flex' : 'none'}>
           <Tooltip hasArrow label={'Drinks'}>
               <span>
@@ -333,7 +340,7 @@ export const GameCard = (props: GameCardProps) => {
           </Link>
         </Box>
       </Flex>
-      <SimpleGrid columns={{ base: 1, md: 2, lg: 4 }} spacing="6" mt={4}>
+      <SimpleGrid columns={{ base: 2, md: 2, lg: 4 }} spacing={{ base: 2, md: 4, lg: 6 }} mt={4}>
         <Box bg={mode('white', 'gray.900')} px="4" py="4" shadow="base" rounded="lg">
           <HStack>
             <Text fontWeight="medium" color={mode('gray.500', 'gray.400')}>

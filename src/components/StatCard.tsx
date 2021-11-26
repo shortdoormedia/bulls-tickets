@@ -34,7 +34,7 @@ export const StatCard = (props: StatCardProps) => {
     const { label, currency, value, change, symbol } = data
 
     return (
-        <Box bg={mode('white', 'gray.700')} px="6" py="4" shadow="base" rounded="lg">
+        <Box bg={mode('white', 'gray.700')} px={{ base: 2, md: 4, lg: 6 }} py={{ base: 2, md: 2, lg: 4 }} shadow="base" rounded="lg">
             <HStack>
                 <Text fontWeight="medium" color={mode('gray.500', 'gray.400')}>
                     {label}  {change.show ? '('+change.percent +')': ''}
