@@ -813,7 +813,7 @@ export const gamedata: GameCardProps['data'][] = [
       statusColorScheme: 'green',
       tv: 'NBCSN',
       weather: 38,
-      win: false,
+      win: true,
     },
     totals: {
       currency: '$',
