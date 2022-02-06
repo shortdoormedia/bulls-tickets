@@ -321,7 +321,7 @@ export const GameCard = (props: GameCardProps) => {
               </span>
           </Tooltip>
         </Box>
-        <Box w={5} h={5} px={3} d={stats.notes ? 'flex' : 'none'}>
+        <Box w={5} h={5} px={3} d={gameId ? 'flex' : 'none'}>
           <Link href={gameId} isExternal d={gameId ? 'flex' : 'none'}>
             <Tooltip hasArrow label={'View Game in Basketball Reference'}>
                 <span>
