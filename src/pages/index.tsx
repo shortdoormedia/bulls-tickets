@@ -47,7 +47,6 @@ const Index = () => (
         </SimpleGrid>
       </Box>
     <DarkModeSwitch />
-    <CTA/>
   </Container>
 
 )
