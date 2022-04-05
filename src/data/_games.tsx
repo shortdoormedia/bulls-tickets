@@ -81,7 +81,7 @@ export const gamedata: GameCardProps['data'][] = [
       currency: '$',
       gameCosts: 0.00,
       ticketCost: 309.12,
-      ticketSales: 	158.00
+      ticketSales: 158.00
     },
   },
   {
@@ -1255,7 +1255,7 @@ export const gamedata: GameCardProps['data'][] = [
       merchandise: false
     },
     stats: {
-      attended: false,
+      attended: true,
       sold: false,
       soldDate: '',
       giveaway: false,
