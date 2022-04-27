@@ -67,6 +67,13 @@ export const data: StatCardProps['data'][] = [
         currency: '$',
     },
     {
+        symbol: 'OVERALL',
+        label: 'Overall Season Cost',
+        value: overallSeasonCost - totalSold,
+        change: { show: false, value: totalSold - overallSeasonCost, percent: (1-(totalSold/overallSeasonCost))*100, text: '' },
+        currency: '$',
+    },
+    {
         symbol: 'ATTENDED',
         label: 'Avg Attended Game',
         value: totalAttended/numAttended || 0.00,
@@ -79,12 +86,5 @@ export const data: StatCardProps['data'][] = [
         value: totalSold/numSold || 0.00,
         change: { show: true, value: 0.00, percent: numSold, text: 'games sold' },
         currency: '$',
-    },
-    {
-        symbol: 'OVERALL',
-        label: 'Overall Season Cost',
-        value: overallSeasonCost - totalSold,
-        change: { show: false, value: totalSold - overallSeasonCost, percent: (1-(totalSold/overallSeasonCost))*100, text: '' },
-        currency: '$',
-    },
+    }
 ]
