@@ -8,11 +8,9 @@ export const DarkModeSwitch = () => {
   return (
     <>
       <ButtonGroup variant="ghost" position="fixed"
-                   top="1rem"
+                   top=".5rem"
                    right="1rem">
-        <Button aria-label="Light/Dark Mode" color={'accent'} leftIcon={colorMode === 'light' ? <FiSun /> : <FiMoon />} onClick={toggleColorMode} fontWeight={'bold'} fontSize={'xl'}>
-
-        </Button>
+        <Button aria-label="Light/Dark Mode" color={'accent'} leftIcon={colorMode === 'light' ? <FiSun /> : <FiMoon />} onClick={toggleColorMode} fontWeight={'bold'} fontSize={'xl'}></Button>
       </ButtonGroup>
     </>
   )
