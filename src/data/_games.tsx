@@ -1774,7 +1774,7 @@ export const gamedata: GameCardProps['data'][] = [
     homeTeam: 'Chicago Bulls',
     homeTeamLogo: 'CHI',
     homeTeamRecord: '45-36',
-    homeTeamScore: 177,
+    homeTeamScore: 117,
     homeTeamStreak: 'L4',
     instagramLink: '',
     gameId: 'https://www.basketball-reference.com/boxscores/202204080CHI.html',
